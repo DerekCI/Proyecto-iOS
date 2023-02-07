@@ -10,6 +10,8 @@ import CoreLocation
 import MapKit
 
 final class LocationViewModel: NSObject, ObservableObject {
+    
+    
     private struct DefaultRegion {
         static let latitude = 9.9333
         static let longitude = -84.0833
@@ -25,12 +27,15 @@ final class LocationViewModel: NSObject, ObservableObject {
     
     override init() {
         super.init()
+        
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
         userLocation = .init(center: CLLocationCoordinate2D(latitude: DefaultRegion.latitude, longitude: DefaultRegion.longitude),
                              span: .init(latitudeDelta: Span.delta, longitudeDelta: Span.delta))
+        
+        
     }
     
     func checkUserAuthorization() {
@@ -54,6 +59,8 @@ extension LocationViewModel: CLLocationManagerDelegate {
         
         userLocation = .init(center: location.coordinate,
                              span: .init(latitudeDelta: Span.delta, longitudeDelta: Span.delta))
+        
+        
         userHasLocation = true
     }
     

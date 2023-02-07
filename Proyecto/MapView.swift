@@ -4,10 +4,23 @@ import UIKit
 
 struct MapView: View {
     @StateObject var locationViewModel = LocationViewModel()
+    
     var body: some View {
+        let gasStation = GasStation.self
+        let coordenadas = CLLocationCoordinate2D(latitude: locationViewModel.userLocation.center.latitude, longitude: locationViewModel.userLocation.center.longitude)
+        
+        let gasolineras = NearestGasStation.getTopFiveNearestStations(
+            stations: getGasStations(), actualLocation: coordenadas)
+        
         ZStack(alignment: .topTrailing ){
+            
             Map(coordinateRegion: $locationViewModel.userLocation, showsUserLocation: true)
                 .ignoresSafeArea()
+            
+            
+        
+            
+                
             Button(action: {
                 self.showProfileView()
             }) {
@@ -32,6 +45,4 @@ struct MapView: View {
     }
 }
 
-struct GasStation {
-    let location: CLLocation
-}
+
