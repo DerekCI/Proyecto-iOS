@@ -9,7 +9,6 @@ import SwiftUI
 import FirebaseAuth
 
 
-
 public class AppViewModel: ObservableObject{
     
     let auth = Auth.auth()
@@ -111,26 +110,26 @@ struct SignInView: View {
                     }).cornerRadius(80)
                     
                 }//hstack
-                Button(action: {
-                    //accion
-                }, label: {
-                    
-                    Text("Google")
-                        .frame(width: 300, height: 50)
-                        .cornerRadius(80)
-                        .foregroundColor(Color.black)
-                        .background(Color("background"))
-                }).cornerRadius(80)
-                Button(action: {
-                    //accion
-                }, label: {
-                    
-                    Text("Facebook")
-                        .frame(width: 300, height: 50)
-                        .cornerRadius(80)
-                        .foregroundColor(Color.white)
-                        .background(Color.blue)
-                }).cornerRadius(80)
+//                Button(action: {
+//                    //accion
+//                }, label: {
+//
+//                    Text("Google")
+//                        .frame(width: 300, height: 50)
+//                        .cornerRadius(80)
+//                        .foregroundColor(Color.black)
+//                        .background(Color("background"))
+//                }).cornerRadius(80)
+//                Button(action: {
+//                    //accion
+//                }, label: {
+//
+//                    Text("Facebook")
+//                        .frame(width: 300, height: 50)
+//                        .cornerRadius(80)
+//                        .foregroundColor(Color.white)
+//                        .background(Color.blue)
+//                }).cornerRadius(80)
                 Spacer()
                 HStack{
                     Text("No tienes cuenta?")
