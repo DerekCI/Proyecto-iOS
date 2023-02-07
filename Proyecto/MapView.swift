@@ -46,9 +46,9 @@ struct MapView: View {
                 .ignoresSafeArea()
             
             
-            Map(coordinateRegion: $locationViewModel.userLocation, annotationItems: annotations) {_ in
+            //Map(coordinateRegion: $locationViewModel.userLocation, annotationItems: annotations) {_ in
 
-                    }
+              //      }
             
                 
             Button(action: {

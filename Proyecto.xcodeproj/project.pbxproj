@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		422D3EA57EED37CDF8F831FD /* Pods_Proyecto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F29CBCB431FE2C4692C44B /* Pods_Proyecto.framework */; };
+		9D18A89429920F150054BC1E /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D18A89329920F150054BC1E /* SplashScreenView.swift */; };
 		9DA1AFFE2990F28B00503439 /* ProyectoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA1AFFD2990F28B00503439 /* ProyectoApp.swift */; };
 		9DA1B0002990F28B00503439 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA1AFFF2990F28B00503439 /* ContentView.swift */; };
 		9DA1B0022990F28C00503439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA1B0012990F28C00503439 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		1EDE2F54F4C0B6A15A76ED61 /* Pods-Proyecto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proyecto.release.xcconfig"; path = "Target Support Files/Pods-Proyecto/Pods-Proyecto.release.xcconfig"; sourceTree = "<group>"; };
+		9D18A89329920F150054BC1E /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		9DA1AFFA2990F28B00503439 /* Proyecto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proyecto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA1AFFD2990F28B00503439 /* ProyectoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProyectoApp.swift; sourceTree = "<group>"; };
 		9DA1AFFF2990F28B00503439 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				9DA1AFFF2990F28B00503439 /* ContentView.swift */,
 				9DA1B00F2990F49100503439 /* MapView.swift */,
 				9DA1B0112990F49700503439 /* ProfileView.swift */,
+				9D18A89329920F150054BC1E /* SplashScreenView.swift */,
 				9DA1B0132990F52300503439 /* GoogleService-Info.plist */,
 				9DA1B0012990F28C00503439 /* Assets.xcassets */,
 				9DA1B0032990F28C00503439 /* Preview Content */,
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D18A89429920F150054BC1E /* SplashScreenView.swift in Sources */,
 				9DA1B0002990F28B00503439 /* ContentView.swift in Sources */,
 				9DA1B00E2990F47C00503439 /* NearestGasStation.swift in Sources */,
 				9DA1B0102990F49100503439 /* MapView.swift in Sources */,
@@ -362,6 +366,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Proyecto/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Chaz;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -395,6 +400,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Proyecto/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Chaz;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
