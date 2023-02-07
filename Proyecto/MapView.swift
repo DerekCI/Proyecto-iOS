@@ -2,15 +2,43 @@ import SwiftUI
 import MapKit
 import UIKit
 
+
+struct GasStation: Identifiable {
+    let id: UUID
+    let location: CLLocationCoordinate2D
+    init(id: UUID = UUID(), lat: Double, long: Double) {
+        self.id = id
+        self.location = CLLocationCoordinate2D(
+            latitude: lat,
+            longitude: long)
+    }
+}
+extension CLLocationCoordinate2D: Identifiable {
+    public var id: String {
+        "\(latitude)-\(longitude)"
+    }
+}
+
 struct MapView: View {
     @StateObject var locationViewModel = LocationViewModel()
     
     var body: some View {
-        let gasStation = GasStation.self
+        
+        
         let coordenadas = CLLocationCoordinate2D(latitude: locationViewModel.userLocation.center.latitude, longitude: locationViewModel.userLocation.center.longitude)
         
         let gasolineras = NearestGasStation.getTopFiveNearestStations(
             stations: getGasStations(), actualLocation: coordenadas)
+        
+        let annotations = [
+            gasolineras[0].location,
+            gasolineras[1].location,
+            gasolineras[2].location,
+            gasolineras[3].location,
+            gasolineras[4].location,
+        ]
+        
+        
         
         ZStack(alignment: .topTrailing ){
             
@@ -18,7 +46,9 @@ struct MapView: View {
                 .ignoresSafeArea()
             
             
-        
+            Map(coordinateRegion: $locationViewModel.userLocation, annotationItems: annotations) {_ in
+
+                    }
             
                 
             Button(action: {

@@ -9,6 +9,7 @@ import SwiftUI
 import FirebaseAuth
 
 
+
 public class AppViewModel: ObservableObject{
     
     let auth = Auth.auth()
