@@ -1,4 +1,4 @@
-# Proyect-iOS
+# Proyecto-iOS
 Proyecto Final diplomado (iOS)
 
 - Objetivo del app: 
